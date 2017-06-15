@@ -21,12 +21,12 @@ Sleekr is distributed under the GNU General Public License, version 2
 
 == Installation ==
 
-1. In your dashboard, go to *Appearance > Themes* and click the *Add New* button.  
-2. Click *Upload Theme* and then click *Browse... / Choose File...*.  
-3. Select the theme's .zip file. Then click *Install Now*.  
-3. Click Activate to use your new theme right away.  
+1. In your dashboard, go to *Appearance > Themes* and click the *Add New* button.
+2. Click *Upload Theme* and then click *Browse... / Choose File...*.
+3. Select the theme's .zip file. Then click *Install Now*.
+3. Click Activate to use your new theme right away.
 
 == Changelog ==
 
-= 1.0 =  
+= 1.0 =
 * Initial release
