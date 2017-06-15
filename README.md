@@ -1,5 +1,5 @@
-=== Sleekr ===  
-Theme Name: Sleekr  
+=== Sleekr Lite ===  
+Theme Name: Sleekr Lite  
 Theme URI: https://www.webhostface.com  
 Author URI: https://plus.google.com/+StefanStaykovBg  
 Author: Stefan Staykov  
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Sleekr is a responsive business and blogging theme for WordPress. Specially crafted for business and multipurpose websites, Sleekr guarantees a fast and smooth experience.
+Sleekr Lite is a responsive simple blogging theme for WordPress. Specially crafted for business blogs, Sleekr Lite guarantees a fast and smooth experience.
 
 Theme page:  
 Demo:  
