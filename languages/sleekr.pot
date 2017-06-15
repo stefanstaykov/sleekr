@@ -1,1 +1,254 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-07 14:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
 
+#: 404.php:9 sleekr-lite/404.php:9
+msgid "Oooops... Error 404"
+msgstr ""
+
+#: 404.php:22 sleekr-lite/404.php:22
+msgid ""
+"The page you're looking for could not be found. Here are some helpful links "
+"to get you back on track:"
+msgstr ""
+
+#: functions.php:78 sleekr-lite/functions.php:77
+msgid "Top primary menu"
+msgstr ""
+
+#: functions.php:79 sleekr-lite/functions.php:78
+msgid "Footer menu"
+msgstr ""
+
+#: functions.php:100 sleekr-lite/functions.php:99
+#, php-format
+msgid "404 Widget Column %d"
+msgstr ""
+
+#: functions.php:111 sleekr-lite/functions.php:110
+#, php-format
+msgid "Footer %d"
+msgstr ""
+
+#. 1: date, 2: time
+#. 1: date, 2: time
+#: functions.php:165 sleekr-lite/functions.php:164
+#, php-format
+msgctxt "date and time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:165 sleekr-lite/functions.php:164
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:169 sleekr-lite/functions.php:168
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: home.php:19 search.php:20 single.php:19 archive.php:48
+#: sleekr-lite/home.php:19 sleekr-lite/search.php:20 sleekr-lite/single.php:19
+#: sleekr-lite/archive.php:48
+msgid "Posted on "
+msgstr ""
+
+#: home.php:20 single.php:20 archive.php:49 sleekr-lite/home.php:20
+#: sleekr-lite/single.php:20 sleekr-lite/archive.php:49
+msgid "by "
+msgstr ""
+
+#: home.php:25 home.php:29 search.php:26 search.php:30 archive.php:54
+#: archive.php:58 sleekr-lite/home.php:25 sleekr-lite/home.php:29
+#: sleekr-lite/search.php:26 sleekr-lite/search.php:30
+#: sleekr-lite/archive.php:54 sleekr-lite/archive.php:58
+msgid "Read More"
+msgstr ""
+
+#: home.php:34 search.php:36 archive.php:64 sleekr-lite/home.php:34
+#: sleekr-lite/search.php:36 sleekr-lite/archive.php:64
+msgid "Sorry, there are no posts."
+msgstr ""
+
+#: comments.php:9 sleekr-lite/comments.php:9
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:18 sleekr-lite/comments.php:18
+msgid "Comment"
+msgstr ""
+
+#: comments.php:20 sleekr-lite/comments.php:20
+msgid "Comments"
+msgstr ""
+
+#: comments.php:31 sleekr-lite/comments.php:31
+msgid "Reply"
+msgstr ""
+
+#: comments.php:37 sleekr-lite/comments.php:37
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:38 sleekr-lite/comments.php:38
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:45 sleekr-lite/comments.php:45
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:52 sleekr-lite/comments.php:52
+#, php-format
+msgid "Required fields are marked with %s"
+msgstr ""
+
+#: comments.php:56 sleekr-lite/comments.php:56
+msgid "Name "
+msgstr ""
+
+#: comments.php:62 sleekr-lite/comments.php:62
+msgid "Email "
+msgstr ""
+
+#: comments.php:68 sleekr-lite/comments.php:68
+msgid "Website "
+msgstr ""
+
+#: comments.php:76 sleekr-lite/comments.php:76
+msgid "Leave a Comment:"
+msgstr ""
+
+#: comments.php:77 sleekr-lite/comments.php:77
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:78 sleekr-lite/comments.php:78
+msgid "Cancel Reply"
+msgstr ""
+
+#: comments.php:79 sleekr-lite/comments.php:79
+msgid "Submit"
+msgstr ""
+
+#: comments.php:85 sleekr-lite/comments.php:85
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:91 sleekr-lite/comments.php:91
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: comments.php:98 sleekr-lite/comments.php:98
+msgid "Your email address will not be published."
+msgstr ""
+
+#: comments.php:103 sleekr-lite/comments.php:103
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: search.php:8 sleekr-lite/search.php:8
+msgid "Search Results for "
+msgstr ""
+
+#: single.php:33 sleekr-lite/single.php:33
+msgid "Sorry, this page does not exist."
+msgstr ""
+
+#: archive.php:10 sleekr-lite/archive.php:10
+msgid "Category Archive "
+msgstr ""
+
+#: archive.php:14 sleekr-lite/archive.php:14
+msgid "Author Archive "
+msgstr ""
+
+#: archive.php:17 sleekr-lite/archive.php:17
+msgid "Daily Archive "
+msgstr ""
+
+#: archive.php:20 sleekr-lite/archive.php:20
+msgid "Monthly Archive "
+msgstr ""
+
+#: archive.php:23 sleekr-lite/archive.php:23
+msgid "Yearly Archive "
+msgstr ""
+
+#: archive.php:26 sleekr-lite/archive.php:26
+msgid "Tag Archive "
+msgstr ""
+
+#: functions/pagination.php:5 sleekr-lite/functions/pagination.php:5
+msgid "&larr; Older"
+msgstr ""
+
+#: functions/pagination.php:7 sleekr-lite/functions/pagination.php:7
+msgid "Newer &rarr;"
+msgstr ""
+
+#: functions/breadcrumbs.php:9 sleekr-lite/functions/breadcrumbs.php:9
+msgid "Home"
+msgstr ""
+
+#: functions/theme-customizer.php:7
+#: sleekr-lite/functions/theme-customizer.php:7
+msgid "Sleekr Theme Options"
+msgstr ""
+
+#: functions/theme-customizer.php:23
+#: sleekr-lite/functions/theme-customizer.php:23
+msgid "Homepage Header Image (1920px x 630px)"
+msgstr ""
+
+#: functions/theme-customizer.php:40
+#: sleekr-lite/functions/theme-customizer.php:40
+msgid "Display Breadcrumbs?"
+msgstr ""
+
+#: functions/theme-customizer.php:55
+#: sleekr-lite/functions/theme-customizer.php:55
+msgid "Display Author Link?"
+msgstr ""
+
+#: functions/theme-customizer.php:70
+#: sleekr-lite/functions/theme-customizer.php:70
+msgid "Display Time Meta?"
+msgstr ""
+
+#. Name of the theme
+msgid "Sleekr Lite"
+msgstr ""
+
+#. Description of the theme
+msgid "A demo theme built for WebHostFace."
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://www.webhostface.com"
+msgstr ""
+
+#. Author of the theme
+msgid "Stefan Staykov"
+msgstr ""
