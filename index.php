@@ -5,7 +5,7 @@
 	 <?php the_content(); ?>
 
 <?php endwhile; else: ?>
-	<p><?php _e('Sorry, no posts matched your criteria.', 'sleekr'); ?></p>
+	<p><?php _e('Sorry, no posts matched your criteria.', 'sleekr-lite'); ?></p>
 <?php endif; ?>
 
 <?php get_footer(); ?>

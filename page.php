@@ -37,7 +37,7 @@
         <?php comments_template(); ?>
 
 	<?php endwhile; else: ?>
-		<p><?php _e('Sorry, this page does not exist.','sleekr'); ?></p>
+		<p><?php _e('Sorry, this page does not exist.','sleekr-lite'); ?></p>
 	<?php endif; ?>
 
   </div>

@@ -1,10 +1,12 @@
 <?php
 
+//Threaded comments after depth 2 function
 function sleekr_comment_parent_link( $args = array() ) {
 
     echo sleekr_get_comment_parent_link( $args );
 }
 
+//Constructing the link for threaded comments after depth 2 
 function sleekr_get_comment_parent_link( $args = array() ) {
 
     $link = '';
@@ -54,7 +56,7 @@ function sleekr_comments($comment, $args, $depth) {
     <?php sleekr_comment_parent_link(
     array(
         'depth'  => 3,
-        'text'   => __( 'In reply to %s', 'sleekr' ),
+        'text'   => __( 'In reply to %s', 'sleekr-lite' ),
         'before' => '<div class="comment-parent">',
         'after'  => '</div>'
     )
@@ -64,11 +66,11 @@ function sleekr_comments($comment, $args, $depth) {
     </div>
     <div class="media-body well"><?php echo '<h4 class="media-heading">'.get_comment_author_link().' <small><a href="'; echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); echo'">';
         /* translators: 1: date, 2: time */
-        printf( _x('%1$s at %2$s','date and time','sleekr'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)','sleekr' ), '  ', '' );
+        printf( _x('%1$s at %2$s','date and time','sleekr-lite'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)','sleekr-lite' ), '  ', '' );
         ?></small></h4>
 
         <?php if ( $comment->comment_approved == '0' ) : ?>
-             <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.','sleekr' ); ?></em>
+             <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.','sleekr-lite' ); ?></em>
               <br />
         <?php endif; ?>
 

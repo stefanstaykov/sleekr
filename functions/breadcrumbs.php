@@ -6,7 +6,7 @@ function custom_breadcrumbs() {
     $separator          = '&gt;';
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumb';
-    $home_title         = __('Home', 'sleekr');
+    $home_title         = _x('Home', 'Breadcrumbs Home Title' , 'sleekr-lite');
       
     // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
     $custom_taxonomy    = 'product_cat';
@@ -223,7 +223,7 @@ function custom_breadcrumbs() {
         if ( get_query_var('paged') ) {
             
             // Paginated archives
-            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'.__('Page','sleekr') . ' ' . get_query_var('paged') . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'._x('Page', 'Paginated Archives Breadcrumb','sleekr-lite') . ' ' . get_query_var('paged') . '</strong></li>';
         }
         
         echo '</ul>';

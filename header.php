@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
-    
+    <link rel="shortcut icon" href="<?php echo THEME_URI. '/favicon.png'?>" />
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
     <style>
-        .sticky:before {content: "<?php echo _x('Featured','Sticky Post','sleekr') ?>"}
-        .comment-list .bypostauthor .pull-left:after {content: "<?php echo _x('Author','Comment by Post Author','sleekr') ?>"}
+        .sticky:before {content: "<?php echo _x('Featured','Sticky Post','sleekr-lite') ?>"}
+        .comment-list .bypostauthor .pull-left:after {content: "<?php echo _x('Author','Comment by Post Author','sleekr-lite') ?>"}
     </style>
 </head>
 

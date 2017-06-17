@@ -4,7 +4,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_section(
     'sleekr_theme_options',
     array(
-        'title'     => __('Sleekr Theme Options','sleekr'),
+        'title'     => __('Sleekr Theme Options','sleekr-lite'),
         'priority'  => 1
     )
     );
@@ -21,7 +21,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'sleekr_header_image',
         array(
-            'label'    => __('Homepage Header Image (1920px x 630px)','sleekr'),
+            'label'    => __('Homepage Header Image (1920px x 630px)','sleekr-lite'),
             'settings' => 'sleekr_header_image',
             'section'  => 'sleekr_theme_options'
         )
@@ -39,7 +39,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     'sleekr_display_breadcrumbs',
     array(
         'section'   => 'sleekr_theme_options',
-        'label'     => __('Display Breadcrumbs?','sleekr'),
+        'label'     => __('Display Breadcrumbs?','sleekr-lite'),
         'type'      => 'checkbox'
     )
     );
@@ -55,7 +55,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     'sleekr_display_author',
     array(
         'section'   => 'sleekr_theme_options',
-        'label'     => __('Display Author Link?','sleekr'),
+        'label'     => __('Display Author Link?','sleekr-lite'),
         'type'      => 'checkbox'
     )
     );
@@ -71,7 +71,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     'sleekr_display_time',
     array(
         'section'   => 'sleekr_theme_options',
-        'label'     => __('Display Time Meta?','sleekr'),
+        'label'     => __('Display Time Meta?','sleekr-lite'),
         'type'      => 'checkbox'
     )
     );

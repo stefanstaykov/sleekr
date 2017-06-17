@@ -34,22 +34,22 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	    <p class="display-time"><i class="fa fa-clock-o"></i> <?php _e('Posted on ','sleekr'); echo '<a href="'; echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')); echo '" class="entry-date">'; the_time('l, F jS, Y'); ?></a></p>
-	    <p class="display-author"><?php _e('by ','sleekr'); the_author_posts_link(); ?></p>
+	    <p class="display-time"><i class="fa fa-clock-o"></i> <?php _e('Posted on ','sleekr-lite'); echo '<a href="'; echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')); echo '" class="entry-date">'; the_time('l, F jS, Y'); ?></a></p>
+	    <p class="display-author"><?php _e('by ','sleekr-lite'); the_author_posts_link(); ?></p>
         <?php if ( has_post_thumbnail() ) : ?>
           <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'sleekr-thumbnail-avatar', array( 'class' => 'img-responsive img-hover' ) );?></a>
           <hr>
 	      <?php the_excerpt() ?>
-	      <a class="btn btn-primary" href="<?php the_permalink(); ?>"><?php _e('Read More','sleekr')?> <i class="fa fa-angle-right"></i></a>
+	      <a class="btn btn-primary" href="<?php the_permalink(); ?>"><?php _e('Read More','sleekr-lite')?> <i class="fa fa-angle-right"></i></a>
 	      <hr>
 	    <?php else : ?>
 	    <?php the_excerpt() ?>
-	    <a class="btn btn-primary" href="<?php the_permalink(); ?>"><?php _e('Read More','sleekr')?> <i class="fa fa-angle-right"></i></a>
+	    <a class="btn btn-primary" href="<?php the_permalink(); ?>"><?php _e('Read More','sleekr-lite')?> <i class="fa fa-angle-right"></i></a>
 	    <hr>
         <?php endif ?>
     </div>
 	<?php endwhile; else: ?>
-		<p><?php _e('Sorry, there are no posts.','sleekr'); ?></p>
+		<p><?php _e('Sorry, there are no posts.','sleekr-lite'); ?></p>
 	<?php endif; ?>
 	
     <?php custom_pagination(); ?> 

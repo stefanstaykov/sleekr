@@ -3,9 +3,9 @@
 function custom_pagination() {
     if (!is_single()) {
 	    echo '<ul class="pager"><li class="previous">';
-        next_posts_link( _x('&larr; Older','Blog/Archive pagination','sleekr') );
+        next_posts_link( _x('&larr; Older','Blog/Archive pagination','sleekr-lite') );
         echo '</li><li class="next">';
-        previous_posts_link( _x('Newer &rarr;','Blog/Archive pagination','sleekr') );
+        previous_posts_link( _x('Newer &rarr;','Blog/Archive pagination','sleekr-lite') );
         echo '</li></ul>';
     } else {
         wp_link_pages( array(
