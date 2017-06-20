@@ -27,21 +27,21 @@ get_header(); ?>
                     <h1><span class="error-404">404</span></h1>
                     <p><?php esc_html_e('The page you\'re looking for could not be found. Here are some helpful links to get you back on track:','sleekr-lite');?></p>
                     <!-- Custom 404 Widget Areas set from Appearance -> Widgets -->
-		    <div class="row">
+		            <div class="row">
                         <?php if ( is_active_sidebar( 's404' ) ) : ?>
                             <div class="col-md-4">
-	                        <?php dynamic_sidebar( 's404' ); ?>
-	                    </div>
+    	                        <?php dynamic_sidebar( 's404' ); ?>
+    	                    </div>
                         <?php endif; ?>
                         <?php if ( is_active_sidebar( 's404-2' ) ) : ?>
                             <div class="col-md-4">
-	                        <?php dynamic_sidebar( 's404-2' ); ?>
-	                    </div>
+    	                        <?php dynamic_sidebar( 's404-2' ); ?>
+    	                    </div>
                         <?php endif; ?>
                         <?php if ( is_active_sidebar( 's404-3' ) ) : ?>
                             <div class="col-md-4">
-	                        <?php dynamic_sidebar( 's404-3' ); ?>
-	                    </div>
+    	                        <?php dynamic_sidebar( 's404-3' ); ?>
+    	                    </div>
                         <?php endif; ?>
                     </div><!-- /.row -->
                 </div><!-- /.jumbotron -->

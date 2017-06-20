@@ -5,7 +5,6 @@
         if ( $( "#wpadminbar" ).length ) {
             $( ".navbar" ).addClass('admin-bar');
         }
-        $("img").addClass('img-responsive');
     });
  
 })( jQuery );
