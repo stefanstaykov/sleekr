@@ -14,12 +14,11 @@ get_header(); ?>
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header"><?php esc_html_e('Oooops... Error 404','sleekr-lite'); ?>
-                </h1>
+            <div class="col-md-12">
+                <h1 class="page-header"><?php esc_html_e('Oooops... Error 404','sleekr-lite'); ?></h1>
                 <?php custom_breadcrumbs(); ?>
-            </div>
-        </div><!-- /Page Heading/Breadcrumbs -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row /Page Heading/Breadcrumbs -->
 
         <div class="row">
 
@@ -44,10 +43,10 @@ get_header(); ?>
 	                        <?php dynamic_sidebar( 's404-3' ); ?>
 	                    </div>
                         <?php endif; ?>
-                    </div><!-- .row -->
-                </div><!-- .jumbotron -->
-            </div><!-- .col-md-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.jumbotron -->
+            </div><!-- /.col-md-12 -->
 
-        </div><!-- .row -->
+        </div><!-- /.row -->
 
 <?php get_footer(); ?>
