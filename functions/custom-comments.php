@@ -45,6 +45,37 @@ function sleekr_comments($comment, $args, $depth) {
         $tag       = 'li';
         $add_below = 'div-comment';
     }
+    $allowed_html = array(
+            //formatting
+            'strong' => array(),
+            'em'     => array(),
+            'b'      => array(),
+            'i'      => array(),
+            's'      => array(),
+            'strike' => array(),
+            'cite'   => array(),
+            'code'   => array(),
+            //links
+            'a'     => array(
+                'href' => array(),
+                'title'=> array()
+            ),
+            'abbr' => array(
+		        'title' => array()
+	        ),
+            'acronym' => array(
+                'title' => array()
+            ),
+            'blockquote' => array(
+                'cite' => array()
+            ),
+            'del' => array(
+                'datetime' => array()
+            ),
+            'q' => array(
+                'cite' => array()
+            )
+    );
     switch( $comment->comment_type ) :
         case 'pingback' :
         case 'trackback' : ?>
@@ -74,7 +105,7 @@ function sleekr_comments($comment, $args, $depth) {
               <br />
         <?php endif; ?>
 
-        <?php comment_text(); ?>
+        <?php echo wp_kses( get_comment_text(), $allowed_html ) ?>
         <div class="pull-right">
             <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
         </div>
