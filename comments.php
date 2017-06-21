@@ -94,8 +94,8 @@
 
         'must_log_in' => '<p class="must-log-in">' .
                           sprintf(
-                          esc_html__( 'You must be %slogged in</a> to post a comment.','sleekr-lite' ),
-                          '<a href="' .wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ). '">'
+                          __( 'You must be <a href="%s">logged in</a> to post a comment.','sleekr-lite' ),
+                          wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
                           ) . '</p>',
 
         'logged_in_as' => '<p class="logged-in-as">' .
@@ -112,7 +112,7 @@
 
         'comment_notes_after' => '<p class="form-allowed-tags">' .
                                   sprintf(
-                                  esc_html__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s','sleekr-lite' ),
+                                  __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s','sleekr-lite' ),
                                   ' <code>' . allowed_tags() . '</code>'
                                   ) . '</p>' )
     );
