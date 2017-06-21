@@ -105,12 +105,12 @@
                           ) . '</p>',
 
         'logged_in_as' => '<p class="logged-in-as">' .
-                          printf(
-                          wp_kses ( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ),
+                          sprintf(
+                          wp_kses ( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ), $allowed_html )
                           admin_url( 'profile.php' ),
                           $user_identity,
                           wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
-                          ), $allowed_html ) . '</p>',
+                          ) . '</p>',
 
         'comment_notes_before' => '<p class="comment-notes">' .
                                   esc_html__( 'Your email address will not be published.','sleekr-lite' ) . ( $req ? $required_text : '' ) .
