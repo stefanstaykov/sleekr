@@ -182,6 +182,7 @@ nav.admin-bar {
 }
 .wp-post-image {
     margin:auto;
+    display:block;
 }
 
 /* 404 Page Styles */
