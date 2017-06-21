@@ -103,7 +103,7 @@
 
         'must_log_in' => '<p class="must-log-in">' .
                           sprintf(
-                          __( 'You must be <a href="%s">logged in</a> to post a comment.','sleekr-lite' ),
+                          wp_kses ( __( 'You must be <a href="%s">logged in</a> to post a comment.','sleekr-lite' ), $allowed_html ),
                           wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
                           ) . '</p>',
 
