@@ -3,7 +3,7 @@
  * Sleekr Lite functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 
