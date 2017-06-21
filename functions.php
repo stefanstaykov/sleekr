@@ -74,6 +74,8 @@ function sleekr_setup() {
     
     // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );
+	
+    // Add Editor Style styles.
     add_editor_style( 'css/editor-style.css' );
 
 	//Enable support for custom logo.
