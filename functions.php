@@ -46,7 +46,7 @@ if ( ! function_exists( 'sleekr_setup' ) ) :
 function sleekr_setup() {
 
     // Translation textdomain and dir
-    load_theme_textdomain(THEME_NAME, LANG_DIR);
+    load_theme_textdomain('THEME_NAME', LANG_DIR);
     
     // Register Custom Navigation Walker
     require_once( LIBS_DIR .'/wp-bootstrap-navwalker.php');
