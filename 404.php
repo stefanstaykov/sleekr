@@ -16,7 +16,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-md-12">
                 <h1 class="page-header"><?php esc_html_e('Oooops... Error 404','sleekr-lite'); ?></h1>
-                <?php custom_breadcrumbs(); ?>
+                <?php sleekr_custom_breadcrumbs(); ?>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row /Page Heading/Breadcrumbs -->
 
