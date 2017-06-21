@@ -81,7 +81,7 @@ get_header(); ?>
 			<p><?php esc_html_e('Sorry, there are no posts.', 'sleekr-lite'); ?></p>
 		<?php endif; ?>
 		<!-- Custom Pagination -->
-		<?php custom_pagination(); ?>
+		<?php sleekr_custom_pagination(); ?>
     </div><!-- /.col-md-8 .well -->
 	<!-- Sidebar -->
   	<div class="col-md-4">
