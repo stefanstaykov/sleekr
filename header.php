@@ -5,7 +5,7 @@
  * This is the template that displays all of the <head> section and everything up until Page Content.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 
