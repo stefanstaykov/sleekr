@@ -3,7 +3,7 @@
  * The template for displaying search results pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 get_header(); ?>
