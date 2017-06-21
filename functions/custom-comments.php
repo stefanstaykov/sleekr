@@ -65,6 +65,13 @@ function sleekr_comments($comment, $args, $depth) {
                 'href' => array(),
                 'title'=> array()
             ),
+	    'img'      	=> array(
+                'src'  	=> array(),
+                'title'	=> array(),
+		'alt'	=> array(),
+		'width'	=> array(),
+		'height'=> array()
+            ),
             'abbr' => array(
 		        'title' => array()
 	        ),
@@ -100,22 +107,23 @@ function sleekr_comments($comment, $args, $depth) {
 	    ); ?>
     <div class="pull-left">
         <?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'media-object' ) ); ?>
-    </div>
+    </div><!-- /.pull-left -->
     <div class="media-body well"><?php echo '<h4 class="media-heading">'.get_comment_author_link().' <small><a href="'; echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); echo'">';
         /* translators: 1: date, 2: time */
         printf( esc_html_x('%1$s at %2$s','date and time','sleekr-lite'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( esc_html__( '(Edit)','sleekr-lite' ), '  ', '' );
         ?></small></h4>
-
+	<!-- Comment is Awaiting Moderation -->
         <?php if ( $comment->comment_approved == '0' ) : ?>
              <em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.','sleekr-lite' ); ?></em>
               <br />
         <?php endif; ?>
-	<!-- Escaping HTML and allowing only certain tag -->
+	<!-- Escaping HTML and allowing only certain tags -->
         <?php echo wp_kses( get_comment_text(), $allowed_html ) ?>
+	<!-- Reply Link -->
         <div class="pull-right">
             <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-        </div>
-    </div>
+        </div><!-- /.pull-right -->
+    </div><!-- .media-body .well -->
     <?php break; ?>
     <?php endswitch; ?>
     <?php
