@@ -196,7 +196,7 @@ function custom_breadcrumbs() {
         } else if ( is_year() ) {
             
             // Display year archive
-            echo '<li class="active item-current item-current-' . get_the_time('Y') . '"><strong class="bread-current bread-current-' . get_the_time('Y') . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</strong></li>';
+            echo '<li class="active item-current item-current-' . get_the_time('Y') . '"><strong class="bread-current bread-current-' . get_the_time('Y') . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr-lite') . '</strong></li>';
                
         } else if ( is_author() ) {
             
@@ -207,12 +207,12 @@ function custom_breadcrumbs() {
             $userdata = get_userdata( $author );
                
             // Display author name
-            echo '<li class="active item-current item-current-' . $userdata->user_nicename . '"><strong class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . esc_html_x('Author', 'Author Breadcrumb','sleekr-lite') . $userdata->display_name . '</strong></li>';
+            echo '<li class="active item-current item-current-' . $userdata->user_nicename . '"><strong class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . esc_html_x('Author', 'Author Breadcrumb','sleekr-lite') .' '. $userdata->display_name . '</strong></li>';
            
         } else if ( is_search() ) {
            
             // Search results page
-            echo '<li class="active item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">'. esc_html_x('Search results for:', 'Search Results Breadcrumb','sleekr-lite') . get_search_query() . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">'. esc_html_x('Search results for:', 'Search Results Breadcrumb','sleekr-lite') .' '. get_search_query() . '</strong></li>';
            
         } elseif ( is_404() ) {
                
@@ -223,7 +223,7 @@ function custom_breadcrumbs() {
         if ( get_query_var('paged') ) {
             
             // Paginated archives
-            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'. esc_html_x('Page', 'Paginated Archives Breadcrumb','sleekr-lite') . get_query_var('paged') . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'. esc_html_x('Page', 'Paginated Archives Breadcrumb','sleekr-lite') .' '. get_query_var('paged') . '</strong></li>';
         }
         
         echo '</ul>';
