@@ -212,7 +212,7 @@ function custom_breadcrumbs() {
         } else if ( is_search() ) {
            
             // Search results page
-            echo '<li class="active item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">Search results for: ' . get_search_query() . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">'. esc_html_x('Search results for:', 'Search Results Breadcrumb','sleekr-lite') . ' ' . get_search_query() . '</strong></li>';
            
         } elseif ( is_404() ) {
                
