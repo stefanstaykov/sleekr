@@ -100,10 +100,10 @@
 
         'logged_in_as' => '<p class="logged-in-as">' .
                           sprintf(
-                          esc_html__( 'Logged in as %1$s%2$s</a>. %3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ),
-                          '<a href="'. admin_url( 'profile.php' ).'">',
+                          __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ),
+                          admin_url( 'profile.php' ),
                           $user_identity,
-                          '<a href="'. wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
+                          wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
                           ) . '</p>',
 
         'comment_notes_before' => '<p class="comment-notes">' .
