@@ -3,7 +3,7 @@
  * The template for displaying all pages
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 get_header(); ?>
