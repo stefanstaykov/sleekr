@@ -45,7 +45,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
 	<!-- Custom Pagination -->
-        <?php custom_pagination(); ?>
+        <?php sleekr_custom_pagination(); ?>
 	<!-- Page Comments -->
         <?php comments_template(); ?>
 
