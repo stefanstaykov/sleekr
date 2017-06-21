@@ -2,6 +2,9 @@
  * File theme-customizer.js.
  *
  * Theme Customizer enhancements for a better user experience.
+ *
+ * @since 1.0.0
+ * @package Sleekr_Lite
  */
 
 (function( $ ) {
