@@ -6,7 +6,7 @@
  * and the comment form.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 ?>
