@@ -44,8 +44,6 @@ get_header(); ?>
 	<!-- Start the Loop -->
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
-	<!-- Custom Pagination -->
-        <?php sleekr_custom_pagination(); ?>
 	<!-- Page Comments -->
         <?php comments_template(); ?>
 
