@@ -36,7 +36,7 @@
 		    <!-- Copyright Text -->
                     <div class="col-md-6">
                     	<p><?php esc_html_e('Copyright &copy; ','sleekr-lite'); echo date( 'Y' ).' &middot; '; esc_html_e('All Rights Reserved','sleekr-lite'); echo ' &middot; '. get_bloginfo( 'name' ); ?><br>
-                    	Sleekr Lite Theme by <a target="_blank" rel="nofollow" href="https://www.webhostface.com">WebHostFace</a> &middot; <a target="_blank" href="https://www.webhostface.com/managed-wordpress-hosting/">Managed WordPress Hosting</a></p>
+                    	<?php esc_html_e('Sleekr Lite Theme by ','sleekr-lite'); ?><a target="_blank" rel="nofollow" href="https://www.webhostface.com">WebHostFace</a> &middot; <a target="_blank" href="https://www.webhostface.com/managed-wordpress-hosting/"><?php esc_html_e('Managed WordPress Hosting','sleekr-lite'); ?></a></p>
                     </div><!-- /.col-md-6 Copyright Text -->
 		    <!-- Footer Menu -->
                     <div class="col-md-6">
