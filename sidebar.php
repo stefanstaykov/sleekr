@@ -9,5 +9,4 @@
 if ( ! is_active_sidebar( 'main' ) ) {
 	return;
 }
-dynamic_sidebar( 'main' ); ?>
-
+dynamic_sidebar( 'main' );
