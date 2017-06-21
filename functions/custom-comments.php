@@ -110,7 +110,7 @@ function sleekr_comments($comment, $args, $depth) {
              <em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.','sleekr-lite' ); ?></em>
               <br />
         <?php endif; ?>
-	//Escaping HTML and allowing only certain tag
+	<!-- Escaping HTML and allowing only certain tag -->
         <?php echo wp_kses( get_comment_text(), $allowed_html ) ?>
         <div class="pull-right">
             <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
