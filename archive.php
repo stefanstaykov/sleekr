@@ -42,7 +42,7 @@ get_header(); ?>
                     single_tag_title();
                 }?> 
             </h1><!-- /.page-header -->
-            <?php custom_breadcrumbs(); ?>
+            <?php sleekr_custom_breadcrumbs(); ?>
 	        <!-- Category/Author/Tag Description -->
             <div class="lead"><?php if ( is_category() ) {
                                         echo category_description();
