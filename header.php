@@ -2,7 +2,7 @@
 /**
  * The header of Sleekr Lite theme
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * This is the template that displays all of the <head> section and everything up until Page Content.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -17,10 +17,11 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- Default Favicon if non selected -->
     <link rel="shortcut icon" href="<?php echo THEME_URI. '/favicon.png'?>" />
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
+    <!-- Enable Threaded Comments support -->
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
     <!-- Translatable strings for .sticky & .bypostauthor -->
     <style>
@@ -30,19 +31,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-    
+<!-- Primary Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+      <!-- Mobile View Menu Button -->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only"><?php esc_html_e('Toggle navigation','sleekr-lite'); ?></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
             <?php sleekr_custom_logo(); ?>
-    </div>
+    </div><!-- /.navbar-header -->
 
         <?php
             wp_nav_menu( array(
@@ -58,5 +60,5 @@
                 'walker'            => new WP_Bootstrap_Navwalker())
             );
         ?>
-    </div>
-</nav>
+    </div><!-- /.container -->
+</nav><!-- /Primary Navigation -->
