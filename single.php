@@ -45,7 +45,7 @@ get_header(); ?>
 			<?php the_tags( esc_html__('Tags: ', 'sleekr-lite'), ', ', '' ); ?> 
 		     <?php endif; ?>
 		     <!-- Post Pagination -->
-		     <?php custom_pagination(); ?>
+		     <?php sleekr_custom_pagination(); ?>
 		     <hr>
 		     <!-- Post Comments -->
 		     <?php comments_template(); ?>
