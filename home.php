@@ -4,7 +4,7 @@
  * acts as the Posts Page when a Static Front Page is selected.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 
