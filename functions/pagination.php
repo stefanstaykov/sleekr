@@ -1,11 +1,17 @@
 <?php
-// Custom pagination
-function custom_pagination() {
-    if (!is_single()) {
+/**
+ * Sleekr Lite Custom Pagination Functions
+ *
+ * @since 1.0.0
+ * @package Sleekr_Lite
+ */
+//Archive Pages Pagination Between Lists of Posts
+function sleekr_custom_pagination() {
+    if ( !is_single() && !is_page() ) {
 	    echo '<ul class="pager"><li class="previous">';
-        next_posts_link( _x('&larr; Older','Blog/Archive pagination','sleekr-lite') );
+        next_posts_link( esc_html_x('&larr; Older','Blog/Archive pagination','sleekr-lite') );
         echo '</li><li class="next">';
-        previous_posts_link( _x('Newer &rarr;','Blog/Archive pagination','sleekr-lite') );
+        previous_posts_link( esc_html_x('Newer &rarr;','Blog/Archive pagination','sleekr-lite') );
         echo '</li></ul>';
     } else {
         wp_link_pages( array(
@@ -17,6 +23,7 @@ function custom_pagination() {
         	) );
     }
 }
+//Single Post/Page Pagination Inside Post/Page
 function sleekr_link_pages( $link ) {
     if ( ctype_digit( $link ) ) {
         return '<li class="active"><span>' . $link . '</span></li>';
