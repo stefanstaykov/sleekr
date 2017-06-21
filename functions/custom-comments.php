@@ -46,7 +46,6 @@ function sleekr_comments($comment, $args, $depth) {
         $add_below = 'div-comment';
     }
     $allowed_html = array(
-            //formatting
             'strong' => array(),
             'em'     => array(),
             'b'      => array(),
@@ -55,7 +54,6 @@ function sleekr_comments($comment, $args, $depth) {
             'strike' => array(),
             'cite'   => array(),
             'code'   => array(),
-            //links
             'a'     => array(
                 'href' => array(),
                 'title'=> array()
