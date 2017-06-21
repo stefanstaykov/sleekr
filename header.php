@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The header of Sleekr Lite theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Sleekr_Lite
+ */
+
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 
 <head>
@@ -7,14 +18,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
     <link rel="shortcut icon" href="<?php echo THEME_URI. '/favicon.png'?>" />
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+    <!-- Translatable strings for .sticky & .bypostauthor -->
     <style>
-        .sticky:before {content: "<?php echo _x('Featured','Sticky Post','sleekr-lite') ?>"}
-        .comment-list .bypostauthor .pull-left:after {content: "<?php echo _x('Author','Comment by Post Author','sleekr-lite') ?>"}
+        .sticky:before {content: "<?php echo esc_html_x('Featured','Sticky Post','sleekr-lite') ?>"}
+        .comment-list .bypostauthor .pull-left:after {content: "<?php echo esc_html_x('Author','Comment by Post Author','sleekr-lite') ?>"}
     </style>
 </head>
 
