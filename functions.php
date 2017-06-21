@@ -119,8 +119,8 @@ function sleekr_setup() {
 
     	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary'   => esc_html__( 'Top primary menu', THEME_NAME ),
-		'footer' => esc_html__( 'Footer menu', THEME_NAME ),
+		'primary'   => esc_html__( 'Top primary menu', 'sleekr-lite' ),
+		'footer' => esc_html__( 'Footer menu', 'sleekr-lite' ),
 	) );
 	
 	// Add theme support for selective refresh for widgets.
