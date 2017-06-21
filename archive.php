@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Sleekr Lite
+ * @package Sleekr_Lite
  */
 
 get_header(); ?>
