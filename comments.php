@@ -105,7 +105,7 @@
                           ) . '</p>',
 
         'logged_in_as' => '<p class="logged-in-as">' .
-                          sprintf(
+                          printf(
                           wp_kses ( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ),
                           admin_url( 'profile.php' ),
                           $user_identity,
