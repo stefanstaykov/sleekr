@@ -62,6 +62,12 @@
 	<div class="well">
     <?php
     $required_text = sprintf( ' ' . esc_html__('Required fields are marked with %s','sleekr-lite'), '<span class="required">*</span>' );
+    $allowed_html = array(
+	'a' => array(
+        	'href' => array(),
+        	'title' => array()
+    	)
+    );
     $fields =  array(
 
   'author' =>
@@ -100,11 +106,11 @@
 
         'logged_in_as' => '<p class="logged-in-as">' .
                           sprintf(
-                          __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ),
+                          wp_kses ( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ),
                           admin_url( 'profile.php' ),
                           $user_identity,
                           wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
-                          ) . '</p>',
+                          ), $allowed_html ) . '</p>',
 
         'comment_notes_before' => '<p class="comment-notes">' .
                                   esc_html__( 'Your email address will not be published.','sleekr-lite' ) . ( $req ? $required_text : '' ) .
