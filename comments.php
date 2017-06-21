@@ -66,7 +66,10 @@
 	'a' => array(
         	'href' => array(),
         	'title' => array()
-    	)
+    	),
+	'abbr' => array(
+		'title' => array()
+	)
     );
     $fields =  array(
 
@@ -118,7 +121,7 @@
 
         'comment_notes_after' => '<p class="form-allowed-tags">' .
                                   sprintf(
-                                  __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s','sleekr-lite' ),
+                                  wp_kses ( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s','sleekr-lite' ), $allowed_html ),
                                   ' <code>' . allowed_tags() . '</code>'
                                   ) . '</p>' )
     );
