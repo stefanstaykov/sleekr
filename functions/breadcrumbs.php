@@ -172,22 +172,22 @@ function custom_breadcrumbs() {
             // Day archive
                
             // Year link
-            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
+            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr-lite') . '</a></li>';
             //echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
                
             // Month link
-            echo '<li class="active item-month item-month-' . get_the_time('m') . '"><a class="bread-month bread-month-' . get_the_time('m') . '" href="' . get_month_link( get_the_time('Y'), get_the_time('m') ) . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</a></li>';
+            echo '<li class="active item-month item-month-' . get_the_time('m') . '"><a class="bread-month bread-month-' . get_the_time('m') . '" href="' . get_month_link( get_the_time('Y'), get_the_time('m') ) . '" title="' . get_the_time('M') . '">' . get_the_time('M') .' '. esc_html_x('Archives', 'Monthly Archive Breadcrumb','sleekr-lite') . '</a></li>';
             //echo '<li class="separator separator-' . get_the_time('m') . '"> ' . $separator . ' </li>';
                
             // Day display
-            echo '<li class="active item-current item-' . get_the_time('j') . '"><strong class="bread-current bread-' . get_the_time('j') . '"> ' . get_the_time('jS') . ' ' . get_the_time('M') . ' Archives</strong></li>';
+            echo '<li class="active item-current item-' . get_the_time('j') . '"><strong class="bread-current bread-' . get_the_time('j') . '"> ' . get_the_time('jS') . ' ' . get_the_time('M') .' '. esc_html_x('Archives', 'Daily Archive Breadcrumb','sleekr-lite') . '</strong></li>';
                
         } else if ( is_month() ) {
             
             // Month Archive
                
             // Year link
-            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr-lite') . '</strong></li></a>';
+            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr-lite') . '</a></li>';
             //echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
                
             // Month display
