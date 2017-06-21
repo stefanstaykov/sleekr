@@ -5,7 +5,7 @@
  * @since 1.0.0
  * @package Sleekr_Lite
  */
-function custom_breadcrumbs() {
+function sleekr_custom_breadcrumbs() {
        
     // Settings
     $separator          = '&gt;';
@@ -59,7 +59,6 @@ function custom_breadcrumbs() {
                 $post_type_archive = get_post_type_archive_link($post_type);
               
                 echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
-                //echo '<li class="separator"> ' . $separator . ' </li>';
               
             }
               
@@ -80,7 +79,6 @@ function custom_breadcrumbs() {
                 $cat_display = '';
                 foreach($cat_parents as $parents) {
                     $cat_display .= '<li class="active item-cat">'.$parents.'</li>';
-                    //$cat_display .= '<li class="separator"> ' . $separator . ' </li>';
                 }
              
             }
@@ -106,7 +104,6 @@ function custom_breadcrumbs() {
             } else if(!empty($cat_id)) {
                   
                 echo '<li class="active item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></li>';
-                //echo '<li class="separator"> ' . $separator . ' </li>';
                 echo '<li class="active item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
               
             } else {
@@ -135,7 +132,6 @@ function custom_breadcrumbs() {
                 if ( !isset( $parents ) ) $parents = null;
                 foreach ( $anc as $ancestor ) {
                     $parents .= '<li class="active item-parent item-parent-' . $ancestor . '"><a class="bread-parent bread-parent-' . $ancestor . '" href="' . get_permalink($ancestor) . '" title="' . get_the_title($ancestor) . '">' . get_the_title($ancestor) . '</a></li>';
-                    //$parents .= '<li class="separator separator-' . $ancestor . '"> ' . $separator . ' </li>';
                 }
                    
                 // Display parent pages
