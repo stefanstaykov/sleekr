@@ -106,10 +106,11 @@
 
         'logged_in_as' => '<p class="logged-in-as">' .
                           sprintf(
-                          wp_kses ( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ), $allowed_html )
+                          wp_kses ( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','sleekr-lite' ),
                           admin_url( 'profile.php' ),
                           $user_identity,
-                          wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
+                          wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ),
+		          $allowed_html )
                           ) . '</p>',
 
         'comment_notes_before' => '<p class="comment-notes">' .
