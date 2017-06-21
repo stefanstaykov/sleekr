@@ -5,7 +5,7 @@
  * Contains the closing of the Page Content div and all content after.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 
