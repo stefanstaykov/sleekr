@@ -94,8 +94,8 @@
 
         'must_log_in' => '<p class="must-log-in">' .
                           sprintf(
-                          esc_html__( 'You must be <a href="%s">logged in</a> to post a comment.','sleekr-lite' ),
-                          wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
+                          esc_html__( 'You must be %slogged in</a> to post a comment.','sleekr-lite' ),
+                          '<a href="' .wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ). '">'
                           ) . '</p>',
 
         'logged_in_as' => '<p class="logged-in-as">' .
