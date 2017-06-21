@@ -3,7 +3,7 @@
  * The template for the Search Form of the theme.
  *
  * @link https://developer.wordpress.org/reference/functions/get_search_form/
- *
+ * @since 1.0.0
  * @package Sleekr_Lite
  */
 ?>
