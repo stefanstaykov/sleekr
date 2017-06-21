@@ -49,10 +49,10 @@ get_header(); ?>
 		     <hr>
 		     <!-- Post Comments -->
 		     <?php comments_template(); ?>
+		</div><!-- /Post -->
 	<?php endwhile; else: ?>
 		<p><?php esc_html_e('Sorry, this post doesn\'t exist.', 'sleekr-lite'); ?></p>
 	<?php endif; ?>
-    		</div><!-- /Post -->
   </div><!-- /.col-md-8 .well -->
   <div class="col-md-4">
     <?php get_sidebar(); ?>
