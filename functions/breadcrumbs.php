@@ -1,15 +1,17 @@
 <?php
-// Breadcrumbs
+/**
+ * Sleekr Lite Custom Breadcrumbs Function
+ *
+ * @since 1.0.0
+ * @package Sleekr_Lite
+ */
 function custom_breadcrumbs() {
        
     // Settings
     $separator          = '&gt;';
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumb';
-    $home_title         = _x('Home', 'Breadcrumbs Home Title' , 'sleekr-lite');
-      
-    // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
-    $custom_taxonomy    = 'product_cat';
+    $home_title         = esc_html_x('Home', 'Breadcrumbs Home Title' , 'sleekr-lite');
        
     // Get the query & post information
     global $post,$wp_query;
@@ -22,7 +24,6 @@ function custom_breadcrumbs() {
            
         // Home page
         echo '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . $home_title . '">' . $home_title . '</a></li>';
-        //echo '<li class="separator separator-home"> ' . $separator . ' </li>';
            
         if ( is_archive() && !is_tax() && !is_category() && !is_tag() && !is_author() && !is_day() && !is_month() && !is_year() ) {
             
@@ -40,7 +41,6 @@ function custom_breadcrumbs() {
                 $post_type_archive = get_post_type_archive_link($post_type);
               
                 echo '<li class="active item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
-                //echo '<li class="separator"> ' . $separator . ' </li>';
               
             }
               
@@ -217,13 +217,13 @@ function custom_breadcrumbs() {
         } elseif ( is_404() ) {
                
             // 404 page
-            echo '<li>' . 'Error 404' . '</li>';
+            echo '<li>' . esc_html_x('Error 404', 'Error 404 Breadcrumb','sleekr-lite') . '</li>';
         }
         
         if ( get_query_var('paged') ) {
             
             // Paginated archives
-            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'._x('Page', 'Paginated Archives Breadcrumb','sleekr-lite') . ' ' . get_query_var('paged') . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'. esc_html_x('Page', 'Paginated Archives Breadcrumb','sleekr-lite') . ' ' . get_query_var('paged') . '</strong></li>';
         }
         
         echo '</ul>';
