@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+<!-- Display the WordPress Header Image -->
 <?php if ( has_header_image() ) {
     echo '<img src="'; header_image(); echo'" height="'; echo get_custom_header()->height; echo '" width="'; echo get_custom_header()->width; echo'" alt="" class="img-page-featured" /><hr>';
 } ?>
