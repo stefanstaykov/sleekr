@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Sleekr Lite
+ * @package Sleekr_Lite
  */
 
 get_header(); ?>
