@@ -6,15 +6,15 @@ Author: Stefan Staykov
 Contributors: chefopld  
 Requires at least: 4.0  
 Tested up to: 4.8  
-License: GPLv2  
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3  
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
 Sleekr Lite is a responsive simple blogging theme for WordPress. Specially crafted for business blogs, Sleekr Lite guarantees a fast and smooth experience.
 
 Sleekr WordPress Theme, Copyright 2017 WebHostFace LLC  
-Sleekr is distributed under the GNU General Public License, version 2
+Sleekr is distributed under the GNU General Public License, version 3
 
 == Installation ==
 
@@ -26,7 +26,7 @@ Sleekr is distributed under the GNU General Public License, version 2
 == License Information ==
 
 Sleekr Light WordPress Theme, Copyright 2017 WebHostFace LLC
-Sleekr Light is distributed under the terms of the GNU GPL v2
+Sleekr Light is distributed under the terms of the GNU GPL v3
 
 Sleekr Light WordPress Theme incorporates code from Bootstrap, Copyright 2011-2017 Twitter, Inc - http://getbootstrap.com/
 Bootstrap is distributed under the terms of The MIT License (MIT) - https://github.com/twbs/bootstrap/blob/master/LICENSE
