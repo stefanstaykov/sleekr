@@ -1,6 +1,12 @@
 <?php
+/**
+ * Sleekr Lite Bootstrap Gallery Shortcode Function
+ *
+ * @since 1.0.0
+ * @package Sleekr_Lite
+ */
 
-function bootstrap_gallery( $output = '', $atts, $instance )
+function sleekr_bootstrap_gallery( $output = '', $atts, $instance )
 {
     $atts = array_merge(array('columns' => 3), $atts);
 
@@ -12,7 +18,6 @@ function bootstrap_gallery( $output = '', $atts, $instance )
     else if ($columns == 2) { $col_class = 'col-md-6'; }
     else if ($columns == 4) { $col_class = 'col-md-3'; }
     else if ($columns == 6) { $col_class = 'col-md-2'; }
-    // other column counts
 
     $return = '<div class="row gallery">';
 
@@ -41,6 +46,6 @@ function bootstrap_gallery( $output = '', $atts, $instance )
 
     return $return;
 }
-add_filter( 'post_gallery', 'bootstrap_gallery', 10, 3 );
+add_filter( 'post_gallery', 'sleekr_bootstrap_gallery', 10, 3 );
 
 ?>

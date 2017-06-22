@@ -1,13 +1,324 @@
 /*
 Theme Name: Sleekr Lite
 Theme URI: https://www.webhostface.com
-Description: A demo theme built for WebHostFace.
 Author: Stefan Staykov
 Author URI: https://plus.google.com/+StefanStaykovBg
-Version: 1.0
+Description: A responsive simple blogging theme for WordPress. Specially crafted for business blogs, Sleekr Lite guarantees a fast and smooth experience.
+Version: 1.0.0
 Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready, blog, editor-style, featured-image-header, custom-header, flexible-header, sticky-post
-Text Domain: sleekr
+Text Domain: sleekr-lite
 Domain Path: /languages
-License: GPLv2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+        white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+.sticky {
+    background-color:#ededed;
+    border:1px solid #f5f5f5;
+    color:#272727;
+    padding:5px;
+}
+
+.sticky:before {
+    color: #FFF;
+    background: #f20000;
+    padding: 10px;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.gallery-caption {
+    text-align:center;
+}
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; 
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-page-featured {
+    margin:auto;
+    display:block;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+nav.admin-bar {
+    top:32px;
+}
+.custom-logo {
+    padding-top: 2px;
+}
+.wp-post-image {
+    margin:auto;
+    display:block;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Footer Styles */
+
+footer {
+    padding: 50px 0;
+    background-color:#222;
+    color:white;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+
+/* Comment Styles */
+
+.comment-list .depth-2 {
+    margin-left:74px;
+}
+
+.comment-list .well {
+    background-color:#fff;
+}
+
+.comment-list .bypostauthor {
+    background-color:#ededed;
+    border:1px solid #f5f5f5;
+    color:#272727;
+    padding:5px;
+}
+
+.comment-list .bypostauthor .pull-left:after {
+    color: #FFF;
+    background: #337ab7;
+    padding: 6px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Gallery Styles */
+
+.row .gallery {
+    margin-bottom:15px;
+}
+
+/* Sidebar Styles */
+
+.list-group > ul > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.list-group > ul > li > a:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.list-group > ul > li > a:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.list-group  > ul > li > a,
+.list-group > ul > li > button {
+  color: #555;
+}
+a.list-group-item .list-group-item-heading,
+button.list-group-item .list-group-item-heading {
+  color: #333;
+}
+.list-group  > ul > li > a:hover,
+.list-group > ul > li > button:hover,
+.list-group > ul > li > a:focus,
+.list-group > ul > li > button:focus {
+  color: #555;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+.list-group > ul > li > button {
+  width: 100%;
+  text-align: left;
+}
+.list-group > ul > li {
+    display: block;
+    margin:5px 0;
+}
+.list-group > ul {
+    padding-left:0;
+}
+
+/* WordPress Calendar Widget Styles */
+
+#wp-calendar > tbody > tr > td, #wp-calendar > thead > tr > th {
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 18px;
+}
+#wp-calendar > caption {
+    font-size: 25px;
+    text-align: center;
+}
+#wp-calendar > tfoot > tr > td {
+    font-size: 20px;
+}
+#wp-calendar > thead > tr {
+    background-color: lightblue;
+}
+#wp-calendar > tbody > tr {
+    background-color: white;
+}
+#wp-calendar {
+    margin: auto;
+}
