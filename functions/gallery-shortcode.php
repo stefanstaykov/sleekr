@@ -1,9 +1,9 @@
 <?php
 /**
- * Sleekr Lite Bootstrap Gallery Shortcode Function
+ * Sleekr Bootstrap Gallery Shortcode Function
  *
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 
 function sleekr_bootstrap_gallery( $output = '', $atts, $instance )

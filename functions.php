@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 
 define( 'THEME_DIR', get_template_directory() );
 define( 'THEME_URI', get_template_directory_uri() );
 define( 'LANG_DIR', THEME_DIR. '/languages' );
 
-define( 'THEME_NAME', 'sleekr-lite' );
+define( 'THEME_NAME', 'sleekr' );
 define( 'THEME_VERSION', '1.0.0' );
 
 define( 'LIBS_DIR', THEME_DIR. '/functions' );
@@ -23,7 +23,7 @@ function sleekr_main_css()
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css');
     wp_enqueue_style( 'jquery-lightbox', get_template_directory_uri() . '/css/jquery.fancybox.min.css');
-    wp_enqueue_style( 'sleekr-lite-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'sleekr-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'sleekr_main_css' );
 
@@ -33,7 +33,7 @@ function sleekr_scripts_with_jquery()
 	// Register the script like this for a theme:
 	wp_enqueue_script( 'bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'jqBootstrapValidation', get_template_directory_uri() . '/js/jqBootstrapValidation.js', array( 'jquery' ) );
-    wp_enqueue_script( 'sleekr', get_template_directory_uri() . '/js/sleekr-lite.js', array( 'jquery' ) );
+    wp_enqueue_script( 'sleekr', get_template_directory_uri() . '/js/sleekr.js', array( 'jquery' ) );
     wp_enqueue_script( 'jquery-lightbox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array( 'jquery' ) );
 
 }
@@ -47,7 +47,7 @@ if ( ! function_exists( 'sleekr_setup' ) ) :
 function sleekr_setup() {
 
     // Translation textdomain and dir
-    load_theme_textdomain('sleekr-lite', LANG_DIR);
+    load_theme_textdomain('sleekr', LANG_DIR);
     
     // Register Custom Navigation Walker
     require_once( LIBS_DIR .'/wp-bootstrap-navwalker.php');
@@ -122,8 +122,8 @@ function sleekr_setup() {
 
     	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary'   => esc_html__( 'Top primary menu', 'sleekr-lite' ),
-		'footer' => esc_html__( 'Footer menu', 'sleekr-lite' ),
+		'primary'   => esc_html__( 'Top primary menu', 'sleekr' ),
+		'footer' => esc_html__( 'Footer menu', 'sleekr' ),
 	) );
 	
 	// Add theme support for selective refresh for widgets.

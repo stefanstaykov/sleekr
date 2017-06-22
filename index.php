@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 get_header(); ?>
 
@@ -13,7 +13,7 @@ get_header(); ?>
 	 <?php the_content(); ?>
 
 <?php endwhile; else: ?>
-	<p><?php esc_html_e('Sorry, no posts matched your criteria.', 'sleekr-lite'); ?></p>
+	<p><?php esc_html_e('Sorry, no posts matched your criteria.', 'sleekr'); ?></p>
 <?php endif; ?>
 
 <?php get_footer(); ?>

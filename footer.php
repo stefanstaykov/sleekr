@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 
 ?>
@@ -35,8 +35,8 @@
 		    </div><!-- /Custom Footer Widget Areas -->
 		    <!-- Copyright Text -->
                     <div class="col-md-6">
-                    	<p><?php esc_html_e('Copyright &copy; ','sleekr-lite'); echo date( 'Y' ).' &middot; '; esc_html_e('All Rights Reserved','sleekr-lite'); echo ' &middot; '. get_bloginfo( 'name' ); ?><br>
-                    	<?php esc_html_e('Sleekr Lite Theme by ','sleekr-lite'); ?><a target="_blank" rel="nofollow" href="https://www.webhostface.com">WebHostFace</a> &middot; <a target="_blank" href="https://www.webhostface.com/managed-wordpress-hosting/"><?php esc_html_e('Managed WordPress Hosting','sleekr-lite'); ?></a></p>
+                    	<p><?php esc_html_e('Copyright &copy; ','sleekr'); echo date( 'Y' ).' &middot; '; esc_html_e('All Rights Reserved','sleekr'); echo ' &middot; '. get_bloginfo( 'name' ); ?><br>
+                    	<?php esc_html_e('Sleekr Lite Theme by ','sleekr'); ?><a target="_blank" rel="nofollow" href="https://www.webhostface.com">WebHostFace</a> &middot; <a target="_blank" href="https://www.webhostface.com/managed-wordpress-hosting/"><?php esc_html_e('Managed WordPress Hosting','sleekr'); ?></a></p>
                     </div><!-- /.col-md-6 Copyright Text -->
 		    <!-- Footer Menu -->
                     <div class="col-md-6">

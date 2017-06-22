@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 get_header(); ?>
 
@@ -48,7 +48,7 @@ get_header(); ?>
         <?php comments_template(); ?>
 
 	<?php endwhile; else: ?>
-		<p><?php esc_html_e('Sorry, this page does not exist.','sleekr-lite'); ?></p>
+		<p><?php esc_html_e('Sorry, this page does not exist.','sleekr'); ?></p>
 	<?php endif; ?>
 
   </div><!-- /.col-md-8 -->

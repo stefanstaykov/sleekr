@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-header"><?php esc_html_e('Oooops... Error 404','sleekr-lite'); ?></h1>
+                <h1 class="page-header"><?php esc_html_e('Oooops... Error 404','sleekr'); ?></h1>
                 <?php sleekr_custom_breadcrumbs(); ?>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row /Page Heading/Breadcrumbs -->
@@ -25,7 +25,7 @@ get_header(); ?>
             <div class="col-md-12">
                 <div class="jumbotron">
                     <h1><span class="error-404">404</span></h1>
-                    <p><?php esc_html_e('The page you\'re looking for could not be found. Here are some helpful links to get you back on track:','sleekr-lite');?></p>
+                    <p><?php esc_html_e('The page you\'re looking for could not be found. Here are some helpful links to get you back on track:','sleekr');?></p>
                     <!-- Custom 404 Widget Areas set from Appearance -> Widgets -->
 		            <div class="row">
                         <?php if ( is_active_sidebar( 's404' ) ) : ?>

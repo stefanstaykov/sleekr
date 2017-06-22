@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 get_header(); ?>
 
@@ -30,9 +30,9 @@ get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		    <!-- Date/Time -->
-		    <p class="display-time"><i class="fa fa-clock-o"></i> <?php esc_html_e('Posted on ','sleekr-lite'); echo '<a href="'; echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')); echo '" class="entry-date">'; the_time('l, F jS, Y'); ?></a></p>
+		    <p class="display-time"><i class="fa fa-clock-o"></i> <?php esc_html_e('Posted on ','sleekr'); echo '<a href="'; echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')); echo '" class="entry-date">'; the_time('l, F jS, Y'); ?></a></p>
 		    <!-- Author Link -->
-		    <p class="display-author"><?php esc_html_e('by ','sleekr-lite'); the_author_posts_link(); ?></p>
+		    <p class="display-author"><?php esc_html_e('by ','sleekr'); the_author_posts_link(); ?></p>
 		    <!-- Post Thumbnail -->
 		    <?php if ( has_post_thumbnail() ) {
 		       echo '<a href="'; the_post_thumbnail_url(); echo '" data-fancybox="featured-image" data-caption="'; the_post_thumbnail_caption(); echo '">'; the_post_thumbnail( 'sleekr-featured-image', array( 'class' => 'img-responsive' ) ); echo '</a><hr>';
@@ -42,7 +42,7 @@ get_header(); ?>
 	 	     <!-- Post Tags -->
 		     <?php if ( has_tag() ) : ?>
 			<hr>
-			<?php the_tags( esc_html__('Tags: ', 'sleekr-lite'), ', ', '' ); ?> 
+			<?php the_tags( esc_html__('Tags: ', 'sleekr'), ', ', '' ); ?> 
 		     <?php endif; ?>
 		     <!-- Post Pagination -->
 		     <?php sleekr_custom_pagination(); ?>
@@ -51,7 +51,7 @@ get_header(); ?>
 		     <?php comments_template(); ?>
 		</div><!-- /Post -->
 	<?php endwhile; else: ?>
-		<p><?php esc_html_e('Sorry, this post doesn\'t exist.', 'sleekr-lite'); ?></p>
+		<p><?php esc_html_e('Sorry, this post doesn\'t exist.', 'sleekr'); ?></p>
 	<?php endif; ?>
   </div><!-- /.col-md-8 .well -->
   <div class="col-md-4">

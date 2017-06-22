@@ -213,7 +213,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				if ( $menu_class ) {
 					echo ' class="' . esc_attr( $menu_class ) . '"'; }
 				echo '>';
-				echo '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', 'sleekr-lite' ) . '</a></li>';
+				echo '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', 'sleekr' ) . '</a></li>';
 				echo '</ul>';
 				if ( $container ) {
 					echo '</' . esc_attr( $container ) . '>'; }

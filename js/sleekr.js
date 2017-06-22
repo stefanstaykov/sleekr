@@ -1,10 +1,10 @@
 /**
- * File sleekr-lite.js.
+ * File sleekr.js.
  * 
  * File for general theme javascript use.
  *
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 
 //Move the static menu bar bellow the WordPress admin bar.

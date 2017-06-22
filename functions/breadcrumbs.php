@@ -1,9 +1,9 @@
 <?php
 /**
- * Sleekr Lite Custom Breadcrumbs Function
+ * Sleekr Custom Breadcrumbs Function
  *
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 function sleekr_custom_breadcrumbs() {
        
@@ -11,7 +11,7 @@ function sleekr_custom_breadcrumbs() {
     $separator          = '&gt;';
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumb';
-    $home_title         = esc_html_x('Home', 'Breadcrumbs Home Title' , 'sleekr-lite');
+    $home_title         = esc_html_x('Home', 'Breadcrumbs Home Title' , 'sleekr');
        
     // Get the query & post information
     global $post,$wp_query;
@@ -168,31 +168,31 @@ function sleekr_custom_breadcrumbs() {
             // Day archive
                
             // Year link
-            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr-lite') . '</a></li>';
+            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr') . '</a></li>';
             //echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
                
             // Month link
-            echo '<li class="active item-month item-month-' . get_the_time('m') . '"><a class="bread-month bread-month-' . get_the_time('m') . '" href="' . get_month_link( get_the_time('Y'), get_the_time('m') ) . '" title="' . get_the_time('M') . '">' . get_the_time('M') .' '. esc_html_x('Archives', 'Monthly Archive Breadcrumb','sleekr-lite') . '</a></li>';
+            echo '<li class="active item-month item-month-' . get_the_time('m') . '"><a class="bread-month bread-month-' . get_the_time('m') . '" href="' . get_month_link( get_the_time('Y'), get_the_time('m') ) . '" title="' . get_the_time('M') . '">' . get_the_time('M') .' '. esc_html_x('Archives', 'Monthly Archive Breadcrumb','sleekr') . '</a></li>';
             //echo '<li class="separator separator-' . get_the_time('m') . '"> ' . $separator . ' </li>';
                
             // Day display
-            echo '<li class="active item-current item-' . get_the_time('j') . '"><strong class="bread-current bread-' . get_the_time('j') . '"> ' . get_the_time('jS') . ' ' . get_the_time('M') .' '. esc_html_x('Archives', 'Daily Archive Breadcrumb','sleekr-lite') . '</strong></li>';
+            echo '<li class="active item-current item-' . get_the_time('j') . '"><strong class="bread-current bread-' . get_the_time('j') . '"> ' . get_the_time('jS') . ' ' . get_the_time('M') .' '. esc_html_x('Archives', 'Daily Archive Breadcrumb','sleekr') . '</strong></li>';
                
         } else if ( is_month() ) {
             
             // Month Archive
                
             // Year link
-            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr-lite') . '</a></li>';
+            echo '<li class="active item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr') . '</a></li>';
             //echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
                
             // Month display
-            echo '<li class=" active item-month item-month-' . get_the_time('m') . '"><strong class="bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') .' '. esc_html_x('Archives', 'Monthly Archive Breadcrumb','sleekr-lite') . '</strong></li>';
+            echo '<li class=" active item-month item-month-' . get_the_time('m') . '"><strong class="bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') .' '. esc_html_x('Archives', 'Monthly Archive Breadcrumb','sleekr') . '</strong></li>';
                
         } else if ( is_year() ) {
             
             // Display year archive
-            echo '<li class="active item-current item-current-' . get_the_time('Y') . '"><strong class="bread-current bread-current-' . get_the_time('Y') . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr-lite') . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_the_time('Y') . '"><strong class="bread-current bread-current-' . get_the_time('Y') . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') .' '. esc_html_x('Archives', 'Yearly Archive Breadcrumb','sleekr') . '</strong></li>';
                
         } else if ( is_author() ) {
             
@@ -203,23 +203,23 @@ function sleekr_custom_breadcrumbs() {
             $userdata = get_userdata( $author );
                
             // Display author name
-            echo '<li class="active item-current item-current-' . $userdata->user_nicename . '"><strong class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . esc_html_x('Author', 'Author Breadcrumb','sleekr-lite') .' '. $userdata->display_name . '</strong></li>';
+            echo '<li class="active item-current item-current-' . $userdata->user_nicename . '"><strong class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . esc_html_x('Author', 'Author Breadcrumb','sleekr') .' '. $userdata->display_name . '</strong></li>';
            
         } else if ( is_search() ) {
            
             // Search results page
-            echo '<li class="active item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">'. esc_html_x('Search results for:', 'Search Results Breadcrumb','sleekr-lite') .' '. get_search_query() . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">'. esc_html_x('Search results for:', 'Search Results Breadcrumb','sleekr') .' '. get_search_query() . '</strong></li>';
            
         } elseif ( is_404() ) {
                
             // 404 page
-            echo '<li>' . esc_html_x('Error 404', 'Error 404 Breadcrumb','sleekr-lite') . '</li>';
+            echo '<li>' . esc_html_x('Error 404', 'Error 404 Breadcrumb','sleekr') . '</li>';
         }
         
         if ( get_query_var('paged') ) {
             
             // Paginated archives
-            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'. esc_html_x('Page', 'Paginated Archives Breadcrumb','sleekr-lite') .' '. get_query_var('paged') . '</strong></li>';
+            echo '<li class="active item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'. esc_html_x('Page', 'Paginated Archives Breadcrumb','sleekr') .' '. get_query_var('paged') . '</strong></li>';
         }
         
         echo '</ul>';

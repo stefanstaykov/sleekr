@@ -1,17 +1,17 @@
 <?php
 /**
- * Sleekr Lite Custom Pagination Functions
+ * Sleekr Custom Pagination Functions
  *
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 //Archive Pages Pagination Between Lists of Posts
 function sleekr_custom_pagination() {
     if ( !is_single() ) {
 	    echo '<ul class="pager"><li class="previous">';
-        next_posts_link( esc_html_x('&larr; Older','Blog/Archive pagination','sleekr-lite') );
+        next_posts_link( esc_html_x('&larr; Older','Blog/Archive pagination','sleekr') );
         echo '</li><li class="next">';
-        previous_posts_link( esc_html_x('Newer &rarr;','Blog/Archive pagination','sleekr-lite') );
+        previous_posts_link( esc_html_x('Newer &rarr;','Blog/Archive pagination','sleekr') );
         echo '</li></ul>';
     } else {
 	//Single Post Pagination

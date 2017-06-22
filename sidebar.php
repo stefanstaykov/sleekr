@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 if ( ! is_active_sidebar( 'main' ) ) {
 	return;

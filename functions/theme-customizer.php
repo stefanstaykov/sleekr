@@ -1,9 +1,9 @@
 <?php
 /**
- * Sleekr Lite Theme Customizer Functions
+ * Sleekr Theme Customizer Functions
  *
  * @since 1.0.0
- * @package Sleekr_Lite
+ * @package Sleekr
  */
 
 function sleekr_register_theme_customizer( $wp_customize ) {
@@ -11,7 +11,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_section(
     'sleekr_theme_options',
     array(
-        'title'     => esc_html__('Sleekr Theme Options','sleekr-lite'),
+        'title'     => esc_html__('Sleekr Theme Options','sleekr'),
         'priority'  => 1
     )
     );
@@ -30,7 +30,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'sleekr_header_image',
         array(
-            'label'    => esc_html__('Homepage Header Image (1920px x 630px)','sleekr-lite'),
+            'label'    => esc_html__('Homepage Header Image (1920px x 630px)','sleekr'),
             'settings' => 'sleekr_header_image',
             'section'  => 'sleekr_theme_options'
         )
@@ -50,7 +50,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     'sleekr_display_breadcrumbs',
     array(
         'section'   => 'sleekr_theme_options',
-        'label'     => esc_html__('Display Breadcrumbs?','sleekr-lite'),
+        'label'     => esc_html__('Display Breadcrumbs?','sleekr'),
         'type'      => 'checkbox'
     )
     );
@@ -68,7 +68,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     'sleekr_display_author',
     array(
         'section'   => 'sleekr_theme_options',
-        'label'     => esc_html__('Display Author Link?','sleekr-lite'),
+        'label'     => esc_html__('Display Author Link?','sleekr'),
         'type'      => 'checkbox'
     )
     );
@@ -86,7 +86,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     'sleekr_display_time',
     array(
         'section'   => 'sleekr_theme_options',
-        'label'     => esc_html__('Display Time Meta?','sleekr-lite'),
+        'label'     => esc_html__('Display Time Meta?','sleekr'),
         'type'      => 'checkbox'
     )
     );
