@@ -83,6 +83,16 @@ function sleekr_custom_breadcrumbs() {
              
             }
               
+            $custom_taxonomy_args = array(
+              'public'   => true,
+              '_builtin' => false
+              
+            ); 
+            $custom_taxonomy_output = 'objects';
+            $custom_taxonomy_operator = 'and';
+            $taxonomies = get_taxonomies( $custom_taxonomy_args, $custom_taxonomy_output, $custom_taxonomy_operator );
+            $custom_taxonomy = $taxonomies[0];
+              
             // If it's a custom post type within a custom taxonomy
             $taxonomy_exists = taxonomy_exists($custom_taxonomy);
             if(empty($last_category) && !empty($custom_taxonomy) && $taxonomy_exists) {
