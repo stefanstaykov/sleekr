@@ -150,7 +150,9 @@ body {
 }
 
 body {
-    padding-top: 50px; 
+    padding-top: 50px;
+    font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
 }
 
 pre {

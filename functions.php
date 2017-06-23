@@ -17,13 +17,14 @@ define( 'THEME_VERSION', '1.0.0' );
 define( 'LIBS_DIR', THEME_DIR. '/functions' );
 define( 'LIBS_URI', THEME_URI. '/functions' );
 
-//Enqueue styles.
+//Enqueue styles and fonts.
 function sleekr_main_css()
 {
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css');
     wp_enqueue_style( 'jquery-lightbox', get_template_directory_uri() . '/css/jquery.fancybox.min.css');
     wp_enqueue_style( 'sleekr-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'sleekr-google-fonts', 'https://fonts.googleapis.com/css?family=Exo+2:400,400i,700,700i&amp;subset=cyrillic', false );
 }
 add_action( 'wp_enqueue_scripts', 'sleekr_main_css' );
 
