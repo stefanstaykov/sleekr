@@ -56,3 +56,4 @@ The following assets / components (GPL or GPL compatible) are used:
 
 = 1.0.1 =
 * Fixed a bug with functions/breadcrumbs.php
+* Changed the primary fonto to Exo 2
