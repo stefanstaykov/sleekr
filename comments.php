@@ -18,6 +18,7 @@
 	       * return early without loading the comments.
 	       */
 	if ( post_password_required() ) : ?>
+	    <hr>
 		<p class="nopassword"><?php esc_html_e( 'This post is password protected. Enter the password to view any comments.', 'sleekr-lite' ); ?></p>
 		</div><!-- #comments -->
 		<?php return;
@@ -52,12 +53,12 @@
 			<li class="next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'sleekr-lite' ) ); ?></li>
 		</nav>
 		<?php endif; ?>
-	<!-- Comment Form -->
-	<?php
-		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
+	<!-- Closed comments -->
+	<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+	    <hr>
 		<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'sleekr-lite' ); ?></p>
 	<?php endif; ?>
+	<!-- Comment Form -->
 	<?php if ( comments_open() ) : ?>
 	<hr>
 	<!-- Comment Form Custom Code -->
