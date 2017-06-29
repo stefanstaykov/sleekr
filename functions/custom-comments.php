@@ -92,8 +92,8 @@ function sleekr_comments($comment, $args, $depth) {
     switch( $comment->comment_type ) :
         case 'pingback' :
         case 'trackback' : ?>
-            <li <?php comment_class(); ?> id="comment<?php comment_ID(); ?>">
-            <div class="back-link">< ?php comment_author_link(); ?></div>
+            <div <?php comment_class(); ?> id="comment<?php comment_ID(); ?>">
+            <div class="back-link"><?php comment_author_link(); ?></div>
         <?php break;
         default : ?>
     <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? 'media' : 'parent media' ) ?> id="comment-<?php comment_ID() ?>">

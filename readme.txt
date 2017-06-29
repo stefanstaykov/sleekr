@@ -1,6 +1,6 @@
 === Sleekr Lite ===  
 Theme Name: Sleekr Lite  
-Theme URI: https://www.webhostface.com  
+Theme URI: https://www.webhostface.com/wordpress-themes/sleekr-lite/ 
 Author URI: https://plus.google.com/+StefanStaykovBg  
 Author: Stefan Staykov  
 Contributors: chefopld  
@@ -56,4 +56,7 @@ The following assets / components (GPL or GPL compatible) are used:
 
 = 1.0.1 =
 * Fixed a bug with functions/breadcrumbs.php
-* Changed the primary fonto to Exo 2
+* Changed the primary font to Exo 2
+
+= 1.0.2 =
+* 

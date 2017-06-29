@@ -12,7 +12,7 @@ define( 'THEME_URI', get_template_directory_uri() );
 define( 'LANG_DIR', THEME_DIR. '/languages' );
 
 define( 'THEME_NAME', 'sleekr-lite' );
-define( 'THEME_VERSION', '1.0.1' );
+define( 'THEME_VERSION', '1.0.2' );
 
 define( 'LIBS_DIR', THEME_DIR. '/functions' );
 define( 'LIBS_URI', THEME_URI. '/functions' );

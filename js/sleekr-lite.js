@@ -15,6 +15,7 @@
         if ( $( "#wpadminbar" ).length ) {
             $( ".navbar" ).addClass('admin-bar');
         }
+        $( "table" ).addClass('table');
     });
  
 })( jQuery );
