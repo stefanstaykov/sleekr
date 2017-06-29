@@ -28,7 +28,7 @@ get_header(); ?>
   <div class="col-md-8 well">
 	<!-- Start the Loop -->
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?>>
 		    <!-- Date/Time -->
 		    <p class="display-time"><i class="fa fa-clock-o"></i> <?php esc_html_e('Posted on ','sleekr-lite'); echo '<a href="'; echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')); echo '" class="entry-date">'; the_time('l, F jS, Y'); ?></a></p>
 		    <!-- Author Link -->
@@ -39,17 +39,16 @@ get_header(); ?>
 		     } ?>
 		     <!-- Post Content -->
 	    	     <?php the_content(); ?>
-	 	     <!-- Post Tags -->
-		     <?php if ( has_tag() ) : ?>
-			<hr>
-			<?php the_tags( esc_html__('Tags: ', 'sleekr-lite'), ', ', '' ); ?> 
-		     <?php endif; ?>
-		     <!-- Post Pagination -->
-		     <?php sleekr_custom_pagination(); ?>
-		     <hr>
-		     <!-- Post Comments -->
-		     <?php comments_template(); ?>
-		</div><!-- /Post -->
+	    </div><!-- /Post -->
+	 	<!-- Post Tags -->
+		<?php if ( has_tag() ) : ?>
+		<hr>
+		<?php the_tags( esc_html__('Tags: ', 'sleekr-lite'), ', ', '' ); ?> 
+		<?php endif; ?>
+		<!-- Post Pagination -->
+		<?php sleekr_custom_pagination(); ?>
+		<!-- Post Comments -->
+		<?php comments_template(); ?>
 	<?php endwhile; else: ?>
 		<p><?php esc_html_e('Sorry, this post doesn\'t exist.', 'sleekr-lite'); ?></p>
 	<?php endif; ?>

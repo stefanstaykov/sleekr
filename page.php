@@ -43,8 +43,10 @@ get_header(); ?>
   <div class="col-md-8 well">
 	<!-- Start the Loop -->
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php the_content(); ?>
-	<!-- Page Comments -->
+        <div id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?>>
+            <?php the_content(); ?>
+        </div><!-- /Page Content -->
+	    <!-- Page Comments -->
         <?php comments_template(); ?>
 
 	<?php endwhile; else: ?>

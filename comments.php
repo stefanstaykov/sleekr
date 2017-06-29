@@ -24,6 +24,7 @@
 	endif; ?>
 	
 	<?php if ( have_comments() ) : ?>
+	    <hr>
 		<!-- Comments Title -->
 		<h4 id="comments-title">
 			<?php
@@ -60,7 +61,6 @@
 	<?php if ( comments_open() ) : ?>
 	<hr>
 	<!-- Comment Form Custom Code -->
-	<div class="well">
 	    <?php
 	    //Text for required fields 
 	    $required_text = sprintf( ' ' . esc_html__('Required fields are marked with %s','sleekr-lite'), '<span class="required">*</span>' );
@@ -97,7 +97,7 @@
 		//Comment Form for real now
 		comment_form( array(
 		'fields'            => $fields,
-		'class_form'        => 'form-group',
+		'class_form'        => 'form-group well',
 		'class_submit'      => 'btn btn-primary',
 		'title_reply'       => esc_html__( 'Leave a Comment:','sleekr-lite' ),
 		'title_reply_to'    => esc_html__( 'Leave a Reply to %s','sleekr-lite' ),
@@ -131,6 +131,5 @@
 					  ) . '</p>' )
 	    );
 	    ?>
-	    </div><!-- end comment form -->
     <?php endif; ?>
 </div><!-- #comments -->

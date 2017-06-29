@@ -26,7 +26,7 @@
     <!-- Translatable strings for .sticky & .bypostauthor -->
     <style>
         .sticky:before {content: "<?php echo esc_html_x('Featured','Sticky Post','sleekr-lite') ?>"}
-        .comment-list .bypostauthor .pull-left:after {content: "<?php echo esc_html_x('Author','Comment by Post Author','sleekr-lite') ?>"}
+        .comment-list .bypostauthor > .pull-left:after {content: "<?php echo esc_html_x('Author','Comment by Post Author','sleekr-lite') ?>"}
     </style>
 </head>
 
