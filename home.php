@@ -15,7 +15,7 @@ get_header(); ?>
 <!-- Page Header Image -->
     <div id="header-image">
         <?php $mods = get_theme_mods();
-        if ( get_theme_mod( 'sleekr_header_image' ) || !isset( $mods[ 'sleekr_header_image' ] ) ) { echo '<img class="img-page-featured" src="'.get_theme_mod( 'sleekr_header_image', THEME_URI . '/sleekr-header.png' ).'">'; }  ?>
+        if ( get_theme_mod( 'sleekr_header_image' ) || !isset( $mods[ 'sleekr_header_image' ] ) ) { echo '<img class="img-page-featured" src="'.get_theme_mod( 'sleekr_header_image', SLEEKR_THEME_URI . '/sleekr-header.png' ).'">'; }  ?>
     </div>
 <hr>
 <!-- Page Content -->
@@ -36,23 +36,18 @@ get_header(); ?>
 <!-- Page Content -->
 <div class="container">
     <!-- Page Heading -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header"><?php wp_title(''); ?></h1>
-        </div>
-    </div>
-    <!-- /.row -->
+    <h1 class="mt-4 mb-3"><?php wp_title(''); ?></h1>
 <?php endif; ?>
 
-<div class="row" style="margin-left:0">
-  	<div class="col-md-8 well">
+<div class="row mx-0">
+  	<div class="col-lg-8 card pt-3">
 		<!-- Start the Loop -->
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<!-- Title -->
 	    		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<!-- Date/Time -->
-        		<p class="display-time"><i class="fa fa-clock-o"></i> <?php esc_html_e('Posted on ','sleekr'); echo '<a href="'; echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')); echo '" class="entry-date">'; the_time('l, F jS, Y'); ?></a></p>
+        		<p class="display-time"><i class="fa fa-clock-o"></i> <?php esc_html_e('Posted on ','sleekr'); echo '<a href="'; echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')); echo '" class="entry-date">'; the_time( get_option( 'date_format' ) ); ?></a></p>
 				<!-- Author Link if isn't an Author Archive Page -->
         		<p class="display-author"><?php esc_html_e('by ','sleekr'); the_author_posts_link(); ?></p>
 				<!-- Post Thumbnail -->
@@ -73,7 +68,7 @@ get_header(); ?>
 		<?php sleekr_custom_pagination(); ?>
     </div><!-- /.col-md-8 .well -->
 	<!-- Sidebar -->
-  	<div class="col-md-4">
+  	<div id="Sidebar" class="col-lg-4 card">
     		<?php get_sidebar(); ?>
   	</div><!-- /.col-md-4 -->
 </div><!-- /.row -->

@@ -18,14 +18,16 @@
 	       * return early without loading the comments.
 	       */
 	if ( post_password_required() ) : ?>
+	    <hr>
 		<p class="nopassword"><?php esc_html_e( 'This post is password protected. Enter the password to view any comments.', 'sleekr' ); ?></p>
 		</div><!-- #comments -->
 		<?php return;
 	endif; ?>
 	
 	<?php if ( have_comments() ) : ?>
+	    <hr>
 		<!-- Comments Title -->
-		<h4 id="comments-title">
+		<h4 id="comments-title" class="card-header">
 			<?php
 				if( get_comments_number() == 1 ){
 					echo get_comments_number() .' '. esc_html__('Comment','sleekr');
@@ -46,21 +48,20 @@
 		</div>
 		<!-- Comment Pagination -->
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav" class="pager">
-			<li class="previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'sleekr' ) ); ?></li>
-			<li class="next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'sleekr' ) ); ?></li>
+		<nav id="comment-nav" class="pagination justify-content-center mt-2">
+			<li class="page-item"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'sleekr' ) ); ?></li>
+			<li class="page-item"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'sleekr' ) ); ?></li>
 		</nav>
 		<?php endif; ?>
-	<!-- Comment Form -->
-	<?php
-		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
+	<!-- Closed comments -->
+	<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+	    <hr>
 		<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'sleekr' ); ?></p>
 	<?php endif; ?>
+	<!-- Comment Form -->
 	<?php if ( comments_open() ) : ?>
 	<hr>
 	<!-- Comment Form Custom Code -->
-	<div class="well">
 	    <?php
 	    //Text for required fields 
 	    $required_text = sprintf( ' ' . esc_html__('Required fields are marked with %s','sleekr'), '<span class="required">*</span>' );
@@ -131,6 +132,5 @@
 					  ) . '</p>' )
 	    );
 	    ?>
-	    </div><!-- end comment form -->
     <?php endif; ?>
 </div><!-- #comments -->

@@ -12,40 +12,36 @@ get_header(); ?>
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Page Heading/Breadcrumbs -->
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="page-header"><?php esc_html_e('Oooops... Error 404','sleekr'); ?></h1>
-                <?php sleekr_custom_breadcrumbs(); ?>
-            </div><!-- /.col-md-12 -->
-        </div><!-- /.row /Page Heading/Breadcrumbs -->
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"><?php esc_html_e('Oooops... Error 404','sleekr'); ?></h1>
+    <?php sleekr_custom_breadcrumbs(); ?>
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col">
                 <div class="jumbotron">
                     <h1><span class="error-404">404</span></h1>
                     <p><?php esc_html_e('The page you\'re looking for could not be found. Here are some helpful links to get you back on track:','sleekr');?></p>
                     <!-- Custom 404 Widget Areas set from Appearance -> Widgets -->
-		            <div class="row">
+		    <div class="row">
                         <?php if ( is_active_sidebar( 's404' ) ) : ?>
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
     	                        <?php dynamic_sidebar( 's404' ); ?>
     	                    </div>
                         <?php endif; ?>
                         <?php if ( is_active_sidebar( 's404-2' ) ) : ?>
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
     	                        <?php dynamic_sidebar( 's404-2' ); ?>
     	                    </div>
                         <?php endif; ?>
                         <?php if ( is_active_sidebar( 's404-3' ) ) : ?>
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
     	                        <?php dynamic_sidebar( 's404-3' ); ?>
     	                    </div>
                         <?php endif; ?>
                     </div><!-- /.row -->
                 </div><!-- /.jumbotron -->
-            </div><!-- /.col-md-12 -->
+            </div><!-- /.col -->
 
         </div><!-- /.row -->
 

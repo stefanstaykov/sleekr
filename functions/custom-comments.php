@@ -1,6 +1,6 @@
 <?php
 /**
- * Sleekr Custom Comment Functions
+ * Sleekr Lite Custom Comment Functions
  *
  * @since 1.0.0
  * @package Sleekr
@@ -92,11 +92,11 @@ function sleekr_comments($comment, $args, $depth) {
     switch( $comment->comment_type ) :
         case 'pingback' :
         case 'trackback' : ?>
-            <li <?php comment_class(); ?> id="comment<?php comment_ID(); ?>">
-            <div class="back-link">< ?php comment_author_link(); ?></div>
+            <div <?php comment_class('list-group'); ?> id="comment<?php comment_ID(); ?>">
+            <div class="list-group-item"><?php comment_author_link(); ?></div>
         <?php break;
         default : ?>
-    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? 'media' : 'parent media' ) ?> id="comment-<?php comment_ID() ?>">
+    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? 'card' : 'parent card' ) ?> id="comment-<?php comment_ID() ?>">
     <?php sleekr_comment_parent_link(
 	    array(
 		'depth'  => 3,
@@ -105,10 +105,9 @@ function sleekr_comments($comment, $args, $depth) {
 		'after'  => '</div>'
 	    )
 	    ); ?>
-    <div class="pull-left">
-        <?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'media-object' ) ); ?>
-    </div><!-- /.pull-left -->
-    <div class="media-body well"><?php echo '<h4 class="media-heading">'.get_comment_author_link().' <small><a href="'; echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); echo'">';
+    <div class="card-body">
+        <?php if ( $args['avatar_size'] != 0 ) {echo '<div class="float-left mr-3">'.get_avatar( $comment, $args['avatar_size']).'</div>';} ?>
+        <?php echo '<h4>'.get_comment_author_link().' <small><a href="'; echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); echo'">';
         /* translators: 1: date, 2: time */
         printf( esc_html_x('%1$s at %2$s','date and time','sleekr'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( esc_html__( '(Edit)','sleekr' ), '  ', '' );
         ?></small></h4>
@@ -120,10 +119,10 @@ function sleekr_comments($comment, $args, $depth) {
 	<!-- Escaping HTML and allowing only certain tags -->
         <?php echo wp_kses( get_comment_text(), $allowed_html ) ?>
 	<!-- Reply Link -->
-        <div class="pull-right">
+        <div class="float-right">
             <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-        </div><!-- /.pull-right -->
-    </div><!-- .media-body .well -->
+        </div><!-- /.float-right -->
+    </div><!-- .card-body -->
     <?php break; ?>
     <?php endswitch; ?>
     <?php

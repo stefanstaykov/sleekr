@@ -31,16 +31,12 @@ get_header(); ?>
 <!-- Page Content -->
 <div class="container">
 <!-- Page Heading/Breadcrumbs -->
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="page-header"><?php the_title(); ?></h1>
-            <?php sleekr_custom_breadcrumbs(); ?>
-        </div><!-- /.col-md-12 -->
-    </div><!-- /.row -->
+    <h1 class="mt-4 mb-3"><?php the_title(); ?></h1>
+    <?php sleekr_custom_breadcrumbs(); ?>
 <?php endif; ?>
 
-<div class="row" style="margin-left:0">
-  <div class="col-md-8 well">
+<div class="row mx-0">
+  <div class="col-lg-8 card pt-3">
 	<!-- Start the Loop -->
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
@@ -52,7 +48,7 @@ get_header(); ?>
 	<?php endif; ?>
 
   </div><!-- /.col-md-8 -->
-  <div class="col-md-4">
+  <div id="Sidebar" class="col-lg-4 card">
     <?php get_sidebar(); ?>
   </div><!-- /.col-md-4 -->
 </div><!-- /.row -->

@@ -13,7 +13,7 @@ get_header(); ?>
 <!-- Page Header Image -->
     <div id="header-image">
         <?php $mods = get_theme_mods();
-        if ( get_theme_mod( 'sleekr_header_image' ) || !isset( $mods[ 'sleekr_header_image' ] ) ) { echo '<img class="img-page-featured" src="'.get_theme_mod( 'sleekr_header_image', THEME_URI . '/sleekr-header.png' ).'">'; }  ?>
+        if ( get_theme_mod( 'sleekr_header_image' ) || !isset( $mods[ 'sleekr_header_image' ] ) ) { echo '<img class="img-page-featured" src="'.get_theme_mod( 'sleekr_header_image', SLEEKR_THEME_URI . '/sleekr-header.png' ).'">'; }  ?>
     </div>
 <hr>
 <!-- Page Content -->
@@ -30,21 +30,21 @@ get_header(); ?>
     ?>
 <!-- Page Content -->
 <div class="container">
-<!-- Page Heading/Breadcrumbs -->
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="page-header"><?php the_title(); ?></h1>
-            <?php sleekr_custom_breadcrumbs(); ?>
-        </div><!-- /.col-md-12 -->
-    </div><!-- /.row -->
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"><?php the_title(); ?></h1>
+    <?php sleekr_custom_breadcrumbs(); ?>
 <?php endif; ?>
 
-<div class="row" style="margin-left:0">
-  <div class="col-md-8 well">
+<div class="row mx-0">
+  <div class="col-lg-8 card pt-3">
 	<!-- Start the Loop -->
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php the_content(); ?>
-	<!-- Page Comments -->
+        <div id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?>>
+            <?php the_content(); ?>
+            <!-- Page Pagination -->
+            <?php sleekr_custom_pagination(); ?>
+        </div><!-- /Page Content -->
+        <!-- Page Comments -->
         <?php comments_template(); ?>
 
 	<?php endwhile; else: ?>
@@ -52,7 +52,7 @@ get_header(); ?>
 	<?php endif; ?>
 
   </div><!-- /.col-md-8 -->
-  <div class="col-md-4">
+  <div id="Sidebar" class="col-lg-4 card">
     <?php get_sidebar(); ?>
   </div><!-- /.col-md-4 -->
 </div><!-- /.row -->

@@ -1,6 +1,6 @@
 <?php
 /**
- * Sleekr Bootstrap Gallery Shortcode Function
+ * Sleekr Lite Bootstrap Gallery Shortcode Function
  *
  * @since 1.0.0
  * @package Sleekr
@@ -13,11 +13,28 @@ function sleekr_bootstrap_gallery( $output = '', $atts, $instance )
     $columns = $atts['columns'];
     $images = explode(',', $atts['ids']);
 
-    $col_class = 'col-md-4'; // default 3 columns
-    if ($columns == 1) { $col_class = 'col-md-12';}
-    else if ($columns == 2) { $col_class = 'col-md-6'; }
-    else if ($columns == 4) { $col_class = 'col-md-3'; }
-    else if ($columns == 6) { $col_class = 'col-md-2'; }
+   switch ($columns){
+        case 1:
+            $col_class = 'col-lg-12';
+            break;
+        case 2:
+            $col_class = 'col-lg-6';
+            break;
+        case 3:
+            $col_class = 'col-lg-4';
+            break;
+        case 4:
+            $col_class = 'col-lg-3';
+            break;
+        case 5:
+            $col_class = 'col-lg-2';
+            break;
+        case 6:
+            $col_class = 'col-lg-2';
+            break;
+        default:
+            $col_class = 'col-lg-1';
+    }
 
     $return = '<div class="row gallery">';
 
@@ -35,7 +52,7 @@ function sleekr_bootstrap_gallery( $output = '', $atts, $instance )
         $return .= '
             <div class="'.$col_class.'">
                 <a data-fancybox="gallery" data-caption="'.$caption.'" href="'.$image_attributes[0].'">
-                    <img src="'.$image_attributes[0].'" alt="" class="img-responsive">
+                    <img src="'.$image_attributes[0].'" alt="">
                 </a><p class="gallery-caption">'.$caption.'</p>
             </div>';
 

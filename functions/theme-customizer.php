@@ -1,6 +1,6 @@
 <?php
 /**
- * Sleekr Theme Customizer Functions
+ * Sleekr Lite Theme Customizer Functions
  *
  * @since 1.0.0
  * @package Sleekr
@@ -19,7 +19,7 @@ function sleekr_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_setting(
     'sleekr_header_image',
     array(
-        'default'           => THEME_URI . '/sleekr-header.png',
+        'default'           => SLEEKR_THEME_URI . '/sleekr-header.png',
         'transport'         => 'postMessage',
         'sanitize_callback' => 'esc_url_raw'
     )
